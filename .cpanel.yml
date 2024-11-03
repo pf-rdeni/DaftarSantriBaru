@@ -2,7 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/u1525344/daftarsantribaru/app
-    - echo "Starting deployment..." > /home/u1525344/log.txt
+    - echo "Starting deployment...daftarsantribaru" > /home/u1525344/log.txt
     - echo "Copying Models..." >> /home/u1525344/log.txt
     - /bin/cp -r /home/u1525344/repositories/DaftarSantriBaru/app/Models $DEPLOYPATH
     - echo "Copying Views..." >> /home/u1525344/log.txt
