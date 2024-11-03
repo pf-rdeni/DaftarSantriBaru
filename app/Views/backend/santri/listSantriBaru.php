@@ -22,7 +22,7 @@
                         <th>TPQ</th>
                         <th>Kelas</th>
                         <th>Status</th>
-                        <th>Tanggal Registrasi</th>
+                        <th>Registrasi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -90,7 +90,7 @@
                         <th>TPQ</th>
                         <th>Kelas</th>
                         <th>Status</th>
-                        <th>Tanggal Registrasi</th>
+                        <th>Registrasi</th>
                         <th>Aksi</th>
                     </tr>
                 </tfoot>
