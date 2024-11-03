@@ -1,17 +1,14 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u1525344/public_html/daftarsantribaru
-    # Buat direktori jika belum ada
-    - mkdir -p $DEPLOYPATH
-    # Salin file-file utama
-    - /bin/cp -R app/* $DEPLOYPATH/app/
-    - /bin/cp -R public/* $DEPLOYPATH/public/
-    - /bin/cp -R system/* $DEPLOYPATH/system/
-    # Salin file konfigurasi
-    - /bin/cp .env $DEPLOYPATH/
-    - /bin/cp composer.json $DEPLOYPATH/
-    # Set permission
-    - /bin/chmod 755 $DEPLOYPATH/writable
-    # Log deployment
-    - echo "Deployment selesai pada $(date)" > $DEPLOYPATH/deployment.log 
+    - export DEPLOYPATH=/home/u1525344/daftarsantribaru/app
+    - echo "Starting deployment...daftarsantribaru" > /home/u1525344/log.txt
+    - echo "Copying Models..." >> /home/u1525344/log.txt
+    - /bin/cp -r /home/u1525344/repositories/DaftarSantriBaru/app/Models $DEPLOYPATH
+    - echo "Copying Views..." >> /home/u1525344/log.txt
+    - /bin/cp -r /home/u1525344/repositories/DaftarSantriBaru/app/Views $DEPLOYPATH
+    - echo "Copying Controllers..." >> /home/u1525344/log.txt
+    - /bin/cp -r /home/u1525344/repositories/DaftarSantriBaru/app/Controllers $DEPLOYPATH
+    - echo "Copying Router.php..." >> /home/u1525344/log.txt
+    - /bin/cp /home/u1525344/repositories/DaftarSantriBaru/app/Config/Routes.php $DEPLOYPATH/Config/
+    - echo "Deployment complete!" >> /home/u1525344/log.txt
