@@ -1,0 +1,17 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/u1525344/public_html/daftarsantribaru
+    # Buat direktori jika belum ada
+    - mkdir -p $DEPLOYPATH
+    # Salin file-file utama
+    - /bin/cp -R app/* $DEPLOYPATH/app/
+    - /bin/cp -R public/* $DEPLOYPATH/public/
+    - /bin/cp -R system/* $DEPLOYPATH/system/
+    # Salin file konfigurasi
+    - /bin/cp .env $DEPLOYPATH/
+    - /bin/cp composer.json $DEPLOYPATH/
+    # Set permission
+    - /bin/chmod 755 $DEPLOYPATH/writable
+    # Log deployment
+    - echo "Deployment selesai pada $(date)" > $DEPLOYPATH/deployment.log 
