@@ -22,7 +22,7 @@ class Santri extends BaseController
         $this->helpFunction = new HelpFunctionModel();
     }
 
-
+    // fungsi untuk menampilkan form tambah santri
     public function createEmisStep()
     {
         $data = [
@@ -32,6 +32,7 @@ class Santri extends BaseController
 
         return view('backend/santri/createEmisStep', $data);
     }
+    // fungsi untuk menyimpan
     public function save()
     {
         $IdSantri = "";
